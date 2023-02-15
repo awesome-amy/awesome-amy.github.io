@@ -1,5 +1,5 @@
 ---
-title: "Controlling Class Hierarchies with Java's Sealed Classes and Interfaces"
+title: "[Java] Controlling Class Hierarchies with Java's Sealed Classes and Interfaces"
 category: technical
 tags:
   - java
@@ -44,6 +44,38 @@ To create a valid subtype of a sealed type, the subtype must meet the following 
 
 Overall, sealed classes in Java provide a way to enforce strict class hierarchies and improve the overall design and stability of your code.
 
+## Using sealed class with switch statements
+Sealed types in Java can be used in switch statements to provide better type safety, by ensuring that all possible cases are handled and avoiding runtime errors.
+
+For example, consider the following code that uses a switch statement with a sealed class:
+
+```java
+public sealed class Animal permits Cat, Dog, Fish {}
+
+public final class Cat extends Animal {}
+public final class Dog extends Animal {}
+public final class Fish extends Animal {}
+
+public static void main(String[] args) {
+    Animal animal = new Dog();
+    
+    switch(animal) {
+        case Cat c:
+            System.out.println("It's a cat!");
+            break;
+        case Dog d:
+            System.out.println("It's a dog!");
+            break;
+        case Fish f:
+            System.out.println("It's a fish!");
+            break;
+    }
+}
+```
+
+In this code, the Animal class is declared as sealed and has three permitted subclasses: Cat, Dog, and Fish. The main method creates an instance of Dog, and then uses a switch statement to determine the type of the animal.
+
+Because the Animal class is sealed, the switch statement can only have cases for the permitted subclasses of Animal. This ensures that all possible cases are handled, and avoids runtime errors that might occur if there were non-permitted subclasses of Animal.
 
 ## What are sealed interfaces?
 Sealed interfaces are a new feature introduced in Java 17, which build upon the sealed classes feature introduced in Java 15. A sealed interface is similar to a sealed class, in that it allows you to define a closed set of permitted implementors of the interface.
