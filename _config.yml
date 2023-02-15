@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "Amy Yun"
-  avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/logo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "One chair for solitude 👩‍💻, two for friendship 🙌, and three for society 🌏. <br> -- Henry David Thoreau"
   location         : "Munich, Germany"
   email            :
