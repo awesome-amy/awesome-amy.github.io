@@ -67,8 +67,6 @@ On the other hand, catching exceptions late can make your code more resilient an
 
 By following this rule, you can create more robust and maintainable code that is better able to handle errors and recover from failures.
 
-> Attribution: This blog post was written entirely by ChatGPT, an AI language model trained by OpenAI. The content has been generated based on its training data and may not always be entirely accurate or up to date. However, the AI language model has tried to provide helpful and informative content on learning Java.
-
 ## Rethrow exceptions
 Rethrowing an exception means throwing the same exception that was caught by an exception handler. You should rethrow an exception when you are not able to handle it completely in the catch block, and want to let the calling method or higher-level exception handler handle it.
 
@@ -90,6 +88,9 @@ try {
 
 In this example, the original IOException that was caught is passed as the cause of the new MyCustomException. This allows you to see the original stack trace when debugging the exception.
 
+It's important to be selective when rethrowing exceptions, and to avoid creating too many levels of exception nesting. Each level of nesting can add overhead and make it harder to debug problems. It's generally best to catch exceptions at the lowest possible level and to rethrow only when necessary to provide additional information or to pass the exception up to a higher-level handler.
+
+### When checked exception is not allowed
 If a checked exception occurs in a method that is not allowed to throw a checked exception, there are several approaches you can take to handle the situation.
 
 One approach is to catch the checked exception and wrap it in an unchecked exception, such as RuntimeException, before rethrowing it. This approach allows the code to propagate the exception up the call stack without requiring the calling method to declare the checked exception in its throws clause.
@@ -106,6 +107,7 @@ public void doSomething() {
 }
 ```
 
+### The initCause() method
 When rethrowing an exception, it is possible to wrap the original exception inside a new exception to provide more contextual information about the error. In such cases, the initCause() method can be used to associate the original exception with the new exception being thrown.
 
 The initCause() method is typically used in a catch block when rethrowing an exception. After creating a new exception object, the initCause() method can be called on the new exception to associate the original exception as the cause.
@@ -128,7 +130,5 @@ In this example, the someMethod() throws a custom MyException which is not allow
 
 By using initCause(), the original exception is preserved as the cause of the new exception, which can be useful for debugging and error handling.
 
-It's important to be selective when rethrowing exceptions, and to avoid creating too many levels of exception nesting. Each level of nesting can add overhead and make it harder to debug problems. It's generally best to catch exceptions at the lowest possible level and to rethrow only when necessary to provide additional information or to pass the exception up to a higher-level handler.
-
-
+> Attribution: This blog post was written entirely by ChatGPT, an AI language model trained by OpenAI. The content has been generated based on its training data and may not always be entirely accurate or up to date. However, the AI language model has tried to provide helpful and informative content on learning Java.
 
