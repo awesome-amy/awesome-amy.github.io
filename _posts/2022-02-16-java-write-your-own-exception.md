@@ -15,9 +15,9 @@ When creating your own exception, it's important to extend an appropriate superc
 ### Provide meaningful error messages
 When throwing an exception, it's important to provide a meaningful error message that explains what went wrong and how the caller can take corrective action. The error message should be clear and concise, and should avoid technical jargon or implementation details. Some good examples are:
 
-    * "The file you are trying to upload exceeds the maximum allowed size of 10MB. Please reduce the file size and try again." - This error message identifies the problem, provides guidance on how to correct it, and includes context to help the user understand the problem.
+* "The file you are trying to upload exceeds the maximum allowed size of 10MB. Please reduce the file size and try again." - This error message identifies the problem, provides guidance on how to correct it, and includes context to help the user understand the problem.
 
-    * "We are experiencing a problem with our servers. Please try again later." - This error message is honest, transparent, and provides guidance on what the user should do next.
+* "We are experiencing a problem with our servers. Please try again later." - This error message is honest, transparent, and provides guidance on what the user should do next.
 
 ### Include a cause or stack trace
 When creating your own exception, it's a good practice to include a cause or stack trace, which provides additional information about the error and helps with debugging. The cause can be another exception that triggered the error, while the stack trace provides a list of method calls that led up to the error.
@@ -37,6 +37,33 @@ public class MyException extends Exception {
     }
 }
 ```
+You can use the initCause() method in the constructor of your custom exception to set the cause of the exception. There are a few different approaches you can take, depending on your needs.
+
+One approach is to pass the cause as a parameter to the constructor. For example:
+
+```java
+public class MyCustomException extends Exception {
+    public MyCustomException(String message, Throwable cause) {
+        super(message);
+        initCause(cause);
+    }
+}
+```
+In this example, the MyCustomException constructor takes a message and a cause as parameters. The initCause() method is called to set the cause of the exception to the provided cause.
+
+Another approach is to set the cause in the constructor using the initCause() method. For example:
+
+```java
+public class MyCustomException extends Exception {
+    public MyCustomException(String message) {
+        super(message);
+        initCause(new Exception("This is the cause"));
+    }
+}
+```
+
+In this example, the MyCustomException constructor takes a message as a parameter. The initCause() method is called to set the cause of the exception to a new Exception object with a message indicating the cause.
+
 You can include a stack trace for your exception by calling the printStackTrace() method. This will print the stack trace to the standard error stream, which is typically the console. However, it's generally not a good idea to rely on the console for error reporting, since it may not be visible to the user. Instead, you should consider using a logging framework like Log4j or the Java logging API.
 
 ```java
