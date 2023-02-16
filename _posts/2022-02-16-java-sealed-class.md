@@ -42,8 +42,6 @@ To create a valid subtype of a sealed type, the subtype must meet the following 
 
 5. If the sealed class has any non-private constructors, the subtype must either implement all of them or define its own constructors that call a non-private constructor of the sealed class.
 
-Overall, sealed classes in Java provide a way to enforce strict class hierarchies and improve the overall design and stability of your code.
-
 ## Using sealed class with switch statements
 Sealed types in Java can be used in switch statements to provide better type safety, by ensuring that all possible cases are handled and avoiding runtime errors.
 
@@ -91,5 +89,7 @@ public sealed interface Animal permits Cat, Dog, Fish {
 In this example, the "Animal" interface is declared as sealed, and the "permits" keyword is used to specify the set of permitted implementors of the interface, which includes "Cat", "Dog", and "Fish". This means that any class that implements the "Animal" interface must either be one of these permitted implementors or be a subclass of one of them.
 
 The permitted implementors of a sealed interface can be any class that implements the interface, including final classes and enums. This allows you to create a well-defined set of implementors for the interface, while still allowing for flexibility in the class hierarchy.
+
+Overall, sealed classes and interfaces in Java provide a way to enforce strict class hierarchies and improve the overall design and stability of your code.
 
 > Attribution: This blog post was written entirely by ChatGPT, an AI language model trained by OpenAI. The content has been generated based on its training data and may not always be entirely accurate or up to date. However, the AI language model has tried to provide helpful and informative content on learning Java.

@@ -1,5 +1,5 @@
 ---
-title: [Book] The Stranger by Albert Camus
+title: "[Book] The Stranger by Albert Camus"
 category: meditative
 tags:
   - book review
