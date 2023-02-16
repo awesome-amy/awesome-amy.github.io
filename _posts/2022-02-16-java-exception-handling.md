@@ -16,7 +16,7 @@ Errors are generally caused by the environment in which a program is running, su
 
 Exceptions, on the other hand, represent exceptional conditions that occur within a program, such as invalid input, network failures, or unexpected conditions, and they can be handled by a program. Exceptions are further divided into two categories: checked exceptions and unchecked exceptions.
 
-### Checked and unchecked exceptions
+## Checked and unchecked exceptions
 
 Checked exceptions are exceptions that must be handled by a program, either by catching the exception or by declaring that the method throws the exception. Examples of checked exceptions in Java include IOException and SQLException.
 
@@ -24,7 +24,7 @@ Unchecked exceptions are exceptions that do not need to be handled explicitly by
 
 In general, unchecked exceptions are used for programming errors or exceptional conditions that are not recoverable, while checked exceptions are used for errors that are recoverable and for which the caller should be able to take corrective action. The decision of whether to use a checked or unchecked exception depends on the context in which the method is being used, and whether or not the error is recoverable.
 
-### RuntimeException
+## RuntimeException
 In Java, RuntimeException is a subclass of Exception and represents a type of unchecked exception. RuntimeExceptions are exceptions that can be thrown by the JVM at runtime and do not need to be declared in a method's signature or handled by a program explicitly.
 
 Some common examples of RuntimeExceptions include NullPointerException, ArrayIndexOutOfBoundsException, and IllegalArgumentException.
