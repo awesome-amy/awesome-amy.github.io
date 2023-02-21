@@ -1,8 +1,8 @@
 ---
-title: "[Java] The Art of Exception Catching: Tips and Tricks for Creating Your Own Exceptions in Java"
-category: german_langauge
+title: "[German Verb] Setzen & Co."
+category: german_language
 tags:
-  - java
+  - german verbs
 toc: true
 toc_sticky: true
 ---
@@ -24,11 +24,11 @@ The German verb "zurücksetzen" has a few different meanings depending on the co
 
 1. To reset:
 
-    Einstellungen zurücksetzen: To reset settings (e.g. on a device).
+    - Einstellungen zurücksetzen: To reset settings (e.g. on a device).
 
         Example: "Ich habe meine Einstellungen zurückgesetzt, weil das Gerät nicht mehr richtig funktionierte." (I reset my settings because the device was not working properly.)
     
-    Passwort zurücksetzen: To reset a password (e.g. for an online account).
+    - Passwort zurücksetzen: To reset a password (e.g. for an online account).
 
         Example: "Ich musste mein Passwort zurücksetzen, weil ich es vergessen hatte." (I had to reset my password because I forgot it.)
 
@@ -117,4 +117,5 @@ The German verb "zurücksetzen" has a few different meanings depending on the co
 
     
     Etwas zurücksetzen, bis wir weitere Informationen haben: To put something on hold until we have further information.
+
         Example: "Wir haben die Entscheidung zurückgesetzt, bis wir weitere Informationen haben." (We put the decision on hold until we have more information.)

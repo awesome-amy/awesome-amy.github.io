@@ -1,7 +1,7 @@
 ---
 title: "German Language Posts 🎨"
-permalink: /german_langauge/
+permalink: /german_language/
 layout: category
-taxonomy: german_langauge
+taxonomy: german_language
 author_profile: true
 ---
