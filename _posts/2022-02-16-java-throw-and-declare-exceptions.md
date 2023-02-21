@@ -130,5 +130,25 @@ In this example, the someMethod() throws a custom MyException which is not allow
 
 By using initCause(), the original exception is preserved as the cause of the new exception, which can be useful for debugging and error handling.
 
+### Exception in lambda expressions
+In Java, any method that declares a checked exception must either handle the exception or declare it in its method signature using the throws keyword. When using lambda expressions with functional interfaces that declare checked exceptions, the same rule applies.
+
+If the abstract method declared in the functional interface throws a checked exception, any lambda expression that is assigned to that functional interface must either catch the exception or declare it in its method signature using the throws keyword.
+
+However, if the lambda expression throws a checked exception that is not declared in the functional interface, the code will not compile. This is because the lambda expression is essentially defining a new implementation of the abstract method, and the new implementation cannot throw an exception that is not declared in the original method.
+
+
 > Attribution: This blog post was written entirely by ChatGPT, an AI language model trained by OpenAI. The content has been generated based on its training data and may not always be entirely accurate or up to date. However, the AI language model has tried to provide helpful and informative content on learning Java.
 
+## Use API methods to throw exceptions
+`Objects.requireNonNull` is a utility method in Java that allows you to check whether an object is null, and throw a NullPointerException with a specific error message if it is. The method takes two arguments: the object to check, and the error message to include in the exception if the object is null.
+
+There are several similar methods to Objects.requireNonNull() in Java that are used to perform various kinds of argument validation:
+
+- `Objects.requireNonNullElse(T obj, T defaultObj)`: This method checks whether the specified object is null, and returns either the object or the default object if the object is null.
+
+- `Objects.requireNonNullElseGet(T obj, Supplier<? extends T> supplier)`: This method checks whether the specified object is null, and returns either the object or the result of the supplier if the object is null.
+
+- `Objects.checkIndex(int index, int size)`: This method checks whether the specified index is within the bounds of the specified size, and throws an IndexOutOfBoundsException if it is not.
+
+- `Objects.checkFromIndexSize(int fromIndex, int size, int length)`: This method checks whether the specified range is within the bounds of the specified length, and throws an IndexOutOfBoundsException if it is not.

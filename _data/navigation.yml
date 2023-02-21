@@ -6,11 +6,9 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Technical"
     url: /technical/
-  - title: "Artistic"
-    url: /artistic/
+  - title: "German Language"
+    url: /german_language/
   - title: "Meditative"
     url: /meditative/
-  - title: "Adventurous"
-    url: /adventurous/
   - title: "Archive"
     url: /tags/
