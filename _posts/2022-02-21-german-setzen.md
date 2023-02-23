@@ -76,10 +76,6 @@ Here are some meanings of the word "setzen" in German along with some common col
 
 8. To lay or put:
 
-    *Hand anlegen/setzen*: to get to work
-
-    - Example: "Wir müssen jetzt alle Hand anlegen, um das Projekt rechtzeitig abzuschließen." (We all have to get to work now to finish the project on time.)
-
     *einen Grundstein setzen*: to lay a foundation
 
     - Example: "Mit diesem Projekt wollen wir den Grundstein für eine bessere Zukunft legen." (With this project, we want to lay the foundation for a better future.)
